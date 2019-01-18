@@ -54,15 +54,10 @@ def app():
     # initialize reading to check number of signals to plot:
     data_reader = SerialReader(Paramenters.portName)
     data_mtx = data_reader.next()
-    intNumSignals = np.
+    intNumSignals = np.shape(data_mtx)[2]
     
-    
-    
-    
-    
-    
-    
-    ax = fig.add_subplot(111)
+    # Create the subplots (Default is one graph per signal.
+    ax = fig.add_subplot(intNumSignals, 1, 1)
     ax.set_xlabel("X axis")
     ax.set_ylabel("Y axis")
     ax.grid()

@@ -51,4 +51,17 @@ def SerialReader(portName):
     
     
     
+    
+def processBlock(socket):
+    
+    #skSize = socket[0]
+    skMode = socket[1]
+    
+    # 200 incluye un diccionario de datos de 4 Bytes (8 medios bits)
+    if skMode == 200:
+        dictSuccessNdata = processBlock_m200(socket)
+        
+    if dictSuccessNdata['success']:
+        return dictSuccessNdata['data']
+    
         

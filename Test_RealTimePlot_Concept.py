@@ -2,6 +2,9 @@
 """
 Created on Tue Jan 15 07:41:10 2019
 Copied from "https://www.quora.com/How-do-I-create-a-real-time-plot-with-matplotlib-and-Tkinter"
+
+NO MODIFICAR
+
 @author: c48146
 """
 

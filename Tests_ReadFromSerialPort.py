@@ -45,16 +45,17 @@ if False:
 
 # PROBAMOS LECTURA EN BUCLE INCREMENTANDO EL ARRAY.
 
-if True:  
+if True:     
     arr = np.empty(0)
     for i in range(10):
         print i
-        arr = np.append(arr, np.frombuffer(ser.read(100), dtype='byte'))
+        arr = np.append(arr, np.frombuffer(ser.read(20), dtype='byte'))
             
     print arr
 # hasta aqui funcionan todas las pruebas.
 # La tarjeta envía primero el byte más significativo cuando se envían números
 # de más de un byte.
+
 
 
 print 'cerrando puerto'
